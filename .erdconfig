@@ -1,0 +1,8 @@
+attributes:
+  - primary_keys
+  - content
+  - timestamps
+  - foreign_key
+  - inheritance
+disconnected: false
+title: "Database Model"

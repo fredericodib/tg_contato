@@ -1,0 +1,162 @@
+
+
+new_test:
+controller: contacts
+action: create
+body: {"contact":{"name":"caderno","email":"30"},"controller":"contacts","action":"create"}
+headers: {}
+path: /contacts
+method: POST
+data:
+Contact 1 {"id":1,"name":"caderno","email":"30","created_at":"2021-03-26T22:42:13.214Z","updated_at":"2021-03-26T22:42:13.214Z"}
+status: 422
+retorno:
+{"email":["has already been taken","is invalid"]}
+
+
+new_test:
+controller: contacts
+action: create
+body: {"contact":{"name":"caderno","email":"oi@dedd.com"},"controller":"contacts","action":"create"}
+headers: {}
+path: /contacts
+method: POST
+data:
+Contact 1 {"id":1,"name":"caderno","email":"30","created_at":"2021-03-26T22:42:13.214Z","updated_at":"2021-03-26T22:42:13.214Z"}
+status: 201
+retorno:
+{"id":2,"name":"caderno","email":"oi@dedd.com","created_at":"2021-03-26T22:50:04.084Z","updated_at":"2021-03-26T22:50:04.084Z"}
+
+
+new_test:
+controller: contacts
+action: create
+body: {"contact":{"name":"","email":"oi@dedd.com"},"controller":"contacts","action":"create"}
+headers: {}
+path: /contacts
+method: POST
+data:
+Contact 1 {"id":1,"name":"caderno","email":"30","created_at":"2021-03-26T22:42:13.214Z","updated_at":"2021-03-26T22:42:13.214Z"}
+Contact 2 {"id":2,"name":"caderno","email":"oi@dedd.com","created_at":"2021-03-26T22:50:04.084Z","updated_at":"2021-03-26T22:50:04.084Z"}
+status: 422
+retorno:
+{"email":["has already been taken"],"name":["can't be blank"]}
+
+
+new_test:
+controller: contacts
+action: create
+body: {"contact":{"name":"iio","email":"oi@dedd.com"},"controller":"contacts","action":"create"}
+headers: {}
+path: /contacts
+method: POST
+data:
+Contact 1 {"id":1,"name":"caderno","email":"30","created_at":"2021-03-26T22:42:13.214Z","updated_at":"2021-03-26T22:42:13.214Z"}
+Contact 2 {"id":2,"name":"caderno","email":"oi@dedd.com","created_at":"2021-03-26T22:50:04.084Z","updated_at":"2021-03-26T22:50:04.084Z"}
+status: 422
+retorno:
+{"email":["has already been taken"]}
+
+
+new_test:
+controller: contacts
+action: index
+body: {"controller":"contacts","action":"index"}
+headers: {}
+path: /contacts
+method: GET
+data:
+Contact 1 {"id":1,"name":"caderno","email":"30","created_at":"2021-03-26T22:42:13.214Z","updated_at":"2021-03-26T22:42:13.214Z"}
+Contact 2 {"id":2,"name":"caderno","email":"oi@dedd.com","created_at":"2021-03-26T22:50:04.084Z","updated_at":"2021-03-26T22:50:04.084Z"}
+status: 200
+retorno:
+[{"id":1,"name":"caderno","email":"30","created_at":"2021-03-26T22:42:13.214Z","updated_at":"2021-03-26T22:42:13.214Z"},{"id":2,"name":"caderno","email":"oi@dedd.com","created_at":"2021-03-26T22:50:04.084Z","updated_at":"2021-03-26T22:50:04.084Z"}]
+
+
+new_test:
+controller: contacts
+action: show
+body: {"controller":"contacts","action":"show","id":"1"}
+headers: {"Authorization":"dedeed"}
+path: /contacts/1
+method: GET
+data:
+Contact 1 {"id":1,"name":"caderno","email":"30","created_at":"2021-03-26T22:42:13.214Z","updated_at":"2021-03-26T22:42:13.214Z"}
+Contact 2 {"id":2,"name":"caderno","email":"oi@dedd.com","created_at":"2021-03-26T22:50:04.084Z","updated_at":"2021-03-26T22:50:04.084Z"}
+status: 200
+retorno:
+{"id":1,"name":"caderno","email":"30","created_at":"2021-03-26T22:42:13.214Z","updated_at":"2021-03-26T22:42:13.214Z"}
+
+
+new_test:
+controller: contacts
+action: update
+body: {"contact":{"name":"clarita caneca"},"controller":"contacts","action":"update","id":"1"}
+headers: {}
+path: /contacts/1
+method: PATCH
+data:
+Contact 1 {"id":1,"name":"caderno","email":"30","created_at":"2021-03-26T22:42:13.214Z","updated_at":"2021-03-26T22:42:13.214Z"}
+Contact 2 {"id":2,"name":"caderno","email":"oi@dedd.com","created_at":"2021-03-26T22:50:04.084Z","updated_at":"2021-03-26T22:50:04.084Z"}
+status: 422
+retorno:
+{"email":["is invalid"]}
+
+
+new_test:
+controller: contacts
+action: update
+body: {"contact":{"name":"clarita caneca"},"controller":"contacts","action":"update","id":"2"}
+headers: {}
+path: /contacts/2
+method: PATCH
+data:
+Contact 1 {"id":1,"name":"caderno","email":"30","created_at":"2021-03-26T22:42:13.214Z","updated_at":"2021-03-26T22:42:13.214Z"}
+Contact 2 {"id":2,"name":"caderno","email":"oi@dedd.com","created_at":"2021-03-26T22:50:04.084Z","updated_at":"2021-03-26T22:50:04.084Z"}
+status: 200
+retorno:
+{"id":2,"name":"clarita caneca","email":"oi@dedd.com","created_at":"2021-03-26T22:50:04.084Z","updated_at":"2021-03-26T22:50:49.328Z"}
+
+
+new_test:
+controller: contacts
+action: update
+body: {"contact":{"name":"clarita caneca","email":"swsw@eded.dd"},"controller":"contacts","action":"update","id":"1"}
+headers: {}
+path: /contacts/1
+method: PATCH
+data:
+Contact 1 {"id":1,"name":"caderno","email":"30","created_at":"2021-03-26T22:42:13.214Z","updated_at":"2021-03-26T22:42:13.214Z"}
+Contact 2 {"id":2,"name":"clarita caneca","email":"oi@dedd.com","created_at":"2021-03-26T22:50:04.084Z","updated_at":"2021-03-26T22:50:49.328Z"}
+status: 200
+retorno:
+{"id":1,"name":"clarita caneca","email":"swsw@eded.dd","created_at":"2021-03-26T22:42:13.214Z","updated_at":"2021-03-26T22:51:01.781Z"}
+
+
+new_test:
+controller: contacts
+action: destroy
+body: {"controller":"contacts","action":"destroy","id":"1"}
+headers: {}
+path: /contacts/1
+method: DELETE
+data:
+Contact 1 {"id":1,"name":"clarita caneca","email":"swsw@eded.dd","created_at":"2021-03-26T22:42:13.214Z","updated_at":"2021-03-26T22:51:01.781Z"}
+Contact 2 {"id":2,"name":"clarita caneca","email":"oi@dedd.com","created_at":"2021-03-26T22:50:04.084Z","updated_at":"2021-03-26T22:50:49.328Z"}
+status: 200
+retorno:
+{}
+
+
+new_test:
+controller: contacts
+action: index
+body: {"controller":"contacts","action":"index"}
+headers: {}
+path: /contacts
+method: GET
+data:
+Contact 2 {"id":2,"name":"clarita caneca","email":"oi@dedd.com","created_at":"2021-03-26T22:50:04.084Z","updated_at":"2021-03-26T22:50:49.328Z"}
+status: 200
+retorno:
+[{"id":2,"name":"clarita caneca","email":"oi@dedd.com","created_at":"2021-03-26T22:50:04.084Z","updated_at":"2021-03-26T22:50:49.328Z"}]

@@ -1,0 +1,115 @@
+{
+  "Cucumber Features": {
+    "coverage": {
+      "/Users/fredericodib/Documents/UNB/TG/tg_contato/app/channels/application_cable/channel.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/fredericodib/Documents/UNB/TG/tg_contato/app/channels/application_cable/connection.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/fredericodib/Documents/UNB/TG/tg_contato/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/fredericodib/Documents/UNB/TG/tg_contato/app/controllers/contacts_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          null,
+          2,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          4,
+          null,
+          4,
+          1,
+          null,
+          3,
+          null,
+          null,
+          null,
+          null,
+          1,
+          3,
+          2,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          5,
+          null,
+          null,
+          null,
+          1,
+          7,
+          null,
+          null
+        ]
+      },
+      "/Users/fredericodib/Documents/UNB/TG/tg_contato/app/jobs/application_job.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/fredericodib/Documents/UNB/TG/tg_contato/app/mailers/application_mailer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/fredericodib/Documents/UNB/TG/tg_contato/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/fredericodib/Documents/UNB/TG/tg_contato/app/models/contact.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      }
+    },
+    "timestamp": 1616799103
+  }
+}
